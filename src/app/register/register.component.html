@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+       <!--The key is to set an offset equal to half of the remaining size of the row. So for example, a column of size 2 would be centered by adding an offset of 5, that's (12-2)/2.-->
+      <form [formGroup]="registerForm">
+        <h2 class="center">Register</h2>
+        <div class="form-group">
+          <label for="userType">User Type</label>
+          <select id="userType" class="form-control" formControlName="userType">
+            <option *ngFor="let userType of userTypes" [value]="userType">{{userType}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input id="username" class="form-control" formControlName="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" class="form-control" formControlName="password" required>
+        </div>
+        <button class="btn btn-default">Submit</button>
+        <p>{{registerForm.value | json}}</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<li *ngFor="let user of users">
+  {{user}}
+</li>

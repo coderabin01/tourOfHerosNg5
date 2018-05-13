@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { ForbiddenValidatorDirective} from './shared/forbidden-name.directive';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
@@ -12,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ForbiddenValidatorDirective,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
