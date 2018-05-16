@@ -1,0 +1,17 @@
+<h2> Attribute Directive - </h2> change the DOM layout by adding and removing DOM elements.
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<p [appHighlight]> Hello</p>
+
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
+
+<h2> Structural Directive - </h2> <p>change the appearance or behavior of an element, component, or another directive.</p>
+<p>Structural directives are easy to recognize. An asterisk (*) precedes the directive attribute name as in this example.</p>

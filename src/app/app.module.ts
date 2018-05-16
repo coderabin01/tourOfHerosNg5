@@ -14,6 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { RegisterComponent } from './register/register.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { HighlightDirective} from './shared/highlight.directive';
+import { TextfieldComponent } from './textfield/textfield.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,11 @@ import { RegisterComponent } from './register/register.component';
     ReactiveFormComponent,
     ForbiddenValidatorDirective,
     RegisterComponent,
+    DirectivesComponent,
+
+    HighlightDirective,
+
+    TextfieldComponent,
   ],
   imports: [
     BrowserModule,
