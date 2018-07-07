@@ -6,6 +6,8 @@ import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
 import { ReactiveFormComponent} from './reactive-form/reactive-form.component';
 import { RegisterComponent} from './register/register.component';
 import { DirectivesComponent} from './directives/directives.component';
+import {CustomReactiveValidationComponent} from "./custom-reactive-validation/custom-reactive-validation.component";
+import {FormBuilderComponent} from "./form-builder/form-builder.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -15,6 +17,9 @@ const routes: Routes = [
   { path: 'reactiveForm', component: ReactiveFormComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'directive', component: DirectivesComponent},
+  { path: 'custom-validation', component: CustomReactiveValidationComponent},
+  { path: 'form-builder', component: FormBuilderComponent}
+
 ]
 
 @NgModule({

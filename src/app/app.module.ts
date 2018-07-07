@@ -17,6 +17,9 @@ import { RegisterComponent } from './register/register.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective} from './shared/highlight.directive';
 import { TextfieldComponent } from './textfield/textfield.component';
+import { CustomReactiveValidationComponent } from './custom-reactive-validation/custom-reactive-validation.component';
+import { CustomValidationDirective } from './directives/custom-reactive-validation/custom-validation.directive';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +34,10 @@ import { TextfieldComponent } from './textfield/textfield.component';
     DirectivesComponent,
 
     HighlightDirective,
-
     TextfieldComponent,
+    CustomReactiveValidationComponent,
+    CustomValidationDirective,
+    FormBuilderComponent,
   ],
   imports: [
     BrowserModule,

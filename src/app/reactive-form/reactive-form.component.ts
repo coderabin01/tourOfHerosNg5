@@ -10,7 +10,9 @@ import {FormBuilder, FormGroup, FormArray, FormControl, Validators} from '@angul
 export class ReactiveFormComponent implements OnInit {
   // hero = {username: 'Mr', password: 'abcd'};
   heroForm: FormGroup;
+  formGroupName: FormGroup;
   ngOnInit() {
+    // this.formGroupName = "rabinForm"
     this.heroForm = new FormGroup({
       username: new FormControl('', [
         Validators.required,

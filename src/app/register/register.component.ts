@@ -11,6 +11,7 @@ export class RegisterComponent implements OnInit {
   users: any = [];
   registerForm: FormGroup;
   userTypes = ['User1', 'User2', 'User3', 'User4'];
+  btnText: string = 'Ok';
   constructor(private userService: UserService) { }
 
   ngOnInit() {

@@ -1,0 +1,61 @@
+<form [formGroup]="policyTermForm" >
+  Term name:
+  <div class="form-group">
+    <input type="text" formControlName="termName">
+    <div *ngIf="termName.invalid && termName.touched">
+      <div *ngIf="termName.errors.required">
+        Term Name is required.
+      </div>
+    </div>
+  </div>
+	Min:
+	<div class="form-group">
+		<input type="text" formControlName="minDuration">
+    {{minDuration.value}}
+    <div *ngIf="minDuration.invalid && (minDuration.dirty || minDuration.touched)"
+         class="new-alert-danger">
+      <div *ngIf="minDuration.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="minDuration.errors.maxlength">
+        Name not be at more than 4 characters long.
+      </div>
+      <div *ngIf="minDuration.errors.min">
+        Should not be less than 1---.
+      </div>
+      <div *ngIf="minDuration.errors.forbiddenName">
+        {{minDuration.errors.forbiddenName | json}}
+        Name cannot be Bob.
+      </div>
+    </div>
+	</div>
+	Max:
+	<div class="form-group">
+		<input type="text" formControlName="maxDuration">
+    <div *ngIf="maxDuration.invalid && (maxDuration.dirty || maxDuration.touched)"
+         class="new-alert-danger">
+      <div *ngIf="maxDuration.errors.required">
+        maxName is required.
+      </div>
+      <div *ngIf="maxDuration.errors.maxlength">
+        maxName not be at more than 4 characters long.
+      </div>
+      <div *ngIf="maxDuration.errors.min">
+        Should not be less than 1---.
+      </div>
+      <div *ngIf="maxDuration.errors.max">
+        Should not be greater than 100---.
+      </div>
+      <div *ngIf="maxDuration.errors.forbiddenName">
+        Name cannot be Bob.
+      </div>
+    </div>
+	</div>
+  <div *ngIf="policyTermForm.invalid && policyTermForm.dirty">
+    <div *ngIf="policyTermForm.errors?.minMaxValidation">
+      Min is greater than max.
+    </div>
+  </div>
+
+  <button type="submit" (click)="submit(policyTermForm.value)" [disabled]="policyTermForm.invalid">Add</button>
+</form>
