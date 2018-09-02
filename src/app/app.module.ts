@@ -20,6 +20,10 @@ import { TextfieldComponent } from './textfield/textfield.component';
 import { CustomReactiveValidationComponent } from './custom-reactive-validation/custom-reactive-validation.component';
 import { CustomValidationDirective } from './directives/custom-reactive-validation/custom-validation.directive';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import {ImageUploadComponent} from "./image-upload/image-upload.component";
+import { PipeComponent } from './pipe/pipe.component'
+
+import {ExponentialStrength} from "./pipe/exponential-strength";
 
 @NgModule({
   declarations: [
@@ -38,6 +42,9 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     CustomReactiveValidationComponent,
     CustomValidationDirective,
     FormBuilderComponent,
+    ImageUploadComponent,
+    PipeComponent,
+    ExponentialStrength,
   ],
   imports: [
     BrowserModule,

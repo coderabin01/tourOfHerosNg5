@@ -2,25 +2,79 @@
   form-builder works!
 </p>
 
-<!--<form [formGroup]="form">-->
-  <!--<label for="name">Name:</label>-->
-  <!--<input id="name" type="text" formControlName="name">-->
-  <!--<br>-->
-  <!--<div [formGoup]="matchingEmail">-->
-    <!--<label for="email">Email:</label>-->
-    <!--<input id="email" type="email" formControlName="email">-->
-    <!--<br>-->
-    <!--<label for="confirmEmail">Confirm Email:</label>-->
-    <!--<input id="confirmEmail" type="email" formControlName="confirmEmail">-->
-  <!--</div>-->
-  <!--<br>-->
-  <!--<div [formGroup]="matchingPassword">-->
-    <!--<label for="password">Password:</label>-->
-    <!--<input id="password" type="password" formControlName="password">-->
-    <!--<br>-->
-    <!--<label for="confirmPassword">Confirm Password:</label>-->
-    <!--<input id="confirmPassword" type="password" formControlName="confirmPassword">-->
-  <!--</div>-->
-<!--</form>-->
-<!--<p>Valid?: {{form.valid}}</p>-->
-<!--<pre>{{form.value | json}}</pre>-->
+<div class="row">
+<form [formGroup]="policyTermForm" class="col-sm-6 center">
+  Term name:
+  <div class="form-group">
+    <input type="text" class="form-control" formControlName="termName">
+    ---{{policyTermForm.controls.termName.errors}}-----
+
+    <div *ngIf="termName.invalid && termName.touched">
+      <div *ngIf="termName.errors.required">
+        Term Name is required.
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      Min:
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="minDuration">
+        <div *ngIf="minDuration.invalid && (minDuration.dirty || minDuration.touched)"
+             class="new-alert-danger">
+          <div *ngIf="minDuration.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="minDuration.errors.maxlength">
+            maxName not be at more than 4 characters long.
+          </div>
+          <div *ngIf="minDuration.errors.min">
+            Should not be less than 1---.
+          </div>
+          <div *ngIf="minDuration.errors.max">
+            Should not be greater than 100---.
+          </div>
+          <div *ngIf="minDuration.errors.forbiddenName">
+            Name cannot be Bob.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      Max:
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="maxDuration">
+        <div *ngIf="maxDuration.invalid && (maxDuration.dirty || maxDuration.touched)"
+             class="new-alert-danger">
+          <div *ngIf="maxDuration.errors.required">
+            maxName is required.
+          </div>
+          <div *ngIf="maxDuration.errors.maxlength">
+            maxName not be at more than 4 characters long.
+          </div>
+          <div *ngIf="maxDuration.errors.min">
+            Should not be less than 1---.
+          </div>
+          <div *ngIf="maxDuration.errors.max">
+            Should not be greater than 100---.
+          </div>
+          <div *ngIf="maxDuration.errors.forbiddenName">
+            Name cannot be Bob.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="policyTermForm.invalid && policyTermForm.dirty">
+    <div *ngIf="policyTermForm.errors?.minMaxValidation">
+      Min is greater than max.
+    </div>
+  </div>
+  FormValue: {{policyTermForm.status | json}}
+  <button type="submit" (click)="submit(policyTermForm.value)" >Adds</button>
+  <!--[disabled]="policyTermForm.invalid"-->
+</form>
+</div>

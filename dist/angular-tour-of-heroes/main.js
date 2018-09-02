@@ -43,12 +43,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _directives_directives_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directives/directives.component */ "./src/app/directives/directives.component.ts");
 /* harmony import */ var _custom_reactive_validation_custom_reactive_validation_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./custom-reactive-validation/custom-reactive-validation.component */ "./src/app/custom-reactive-validation/custom-reactive-validation.component.ts");
 /* harmony import */ var _form_builder_form_builder_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./form-builder/form-builder.component */ "./src/app/form-builder/form-builder.component.ts");
+/* harmony import */ var _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./image-upload/image-upload.component */ "./src/app/image-upload/image-upload.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -68,7 +70,8 @@ var routes = [
     { path: 'register', component: _register_register_component__WEBPACK_IMPORTED_MODULE_6__["RegisterComponent"] },
     { path: 'directive', component: _directives_directives_component__WEBPACK_IMPORTED_MODULE_7__["DirectivesComponent"] },
     { path: 'custom-validation', component: _custom_reactive_validation_custom_reactive_validation_component__WEBPACK_IMPORTED_MODULE_8__["CustomReactiveValidationComponent"] },
-    { path: 'form-builder', component: _form_builder_form_builder_component__WEBPACK_IMPORTED_MODULE_9__["FormBuilderComponent"] }
+    { path: 'form-builder', component: _form_builder_form_builder_component__WEBPACK_IMPORTED_MODULE_9__["FormBuilderComponent"] },
+    { path: 'image-upload', component: _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_10__["ImageUploadComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -104,7 +107,7 @@ module.exports = "/* AppComponent's private CSS styles */\r\nh1 {\r\n  font-size
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\r\n  <a routerLink=\"/dashboard\"> Dashboard</a>\r\n  <a routerLink=\"/heroes\"> Heroes</a>\r\n  <a routerLink=\"/register\"> Register</a>\r\n  <a routerLink=\"/reactiveForm\"> Reactive Form</a>\r\n  <a routerLink=\"/directive\"> Directive</a>\r\n  <a routerLink=\"/custom-validation\"> Custome Reactive Validations</a>\r\n  <a routerLink=\"/form-builder\">Form Builder</a>\r\n</nav>\r\n<router-outlet></router-outlet>\r\n<app-messages></app-messages>\r\n"
+module.exports = "<nav>\r\n  <a routerLink=\"/dashboard\"> Dashboard</a>\r\n  <a routerLink=\"/heroes\"> Heroes</a>\r\n  <a routerLink=\"/register\"> Register</a>\r\n  <a routerLink=\"/reactiveForm\"> Reactive Form</a>\r\n  <a routerLink=\"/directive\"> Directive</a>\r\n  <a routerLink=\"/custom-validation\"> Custome Reactive Validations</a>\r\n  <a routerLink=\"/form-builder\">Form Builder</a>\r\n  <a routerLink=\"/image-upload\">Image Upload</a>\r\n</nav>\r\n<router-outlet></router-outlet>\r\n<app-messages></app-messages>\r\n"
 
 /***/ }),
 
@@ -175,6 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _custom_reactive_validation_custom_reactive_validation_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./custom-reactive-validation/custom-reactive-validation.component */ "./src/app/custom-reactive-validation/custom-reactive-validation.component.ts");
 /* harmony import */ var _directives_custom_reactive_validation_custom_validation_directive__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directives/custom-reactive-validation/custom-validation.directive */ "./src/app/directives/custom-reactive-validation/custom-validation.directive.ts");
 /* harmony import */ var _form_builder_form_builder_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./form-builder/form-builder.component */ "./src/app/form-builder/form-builder.component.ts");
+/* harmony import */ var _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./image-upload/image-upload.component */ "./src/app/image-upload/image-upload.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -202,6 +206,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+// import { ImageUploadComponent} from "./image-upload/image-upload.component";
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -222,6 +228,7 @@ var AppModule = /** @class */ (function () {
                 _custom_reactive_validation_custom_reactive_validation_component__WEBPACK_IMPORTED_MODULE_18__["CustomReactiveValidationComponent"],
                 _directives_custom_reactive_validation_custom_validation_directive__WEBPACK_IMPORTED_MODULE_19__["CustomValidationDirective"],
                 _form_builder_form_builder_component__WEBPACK_IMPORTED_MODULE_20__["FormBuilderComponent"],
+                _image_upload_image_upload_component__WEBPACK_IMPORTED_MODULE_21__["ImageUploadComponent"],
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -260,7 +267,7 @@ module.exports = ".new-alert-danger{\r\n  color: red;\r\n}\r\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"policyTermForm\" >\n  Term name:\n  <!--<div class=\"form-group\">-->\n    <!--<input type=\"text\" formControlName=\"termName\">-->\n    <!--{{termName}}-->\n    <!--&lt;!&ndash;<div *ngIf=\"termName.invalid && termName.touched\">&ndash;&gt;-->\n      <!--&lt;!&ndash;<div *ngIf=\"termName.errors.required\">&ndash;&gt;-->\n        <!--&lt;!&ndash;Term Name is required.&ndash;&gt;-->\n      <!--&lt;!&ndash;</div>&ndash;&gt;-->\n    <!--&lt;!&ndash;</div>&ndash;&gt;-->\n  <!--</div>-->\n\tMin:\n\t<div class=\"form-group\">\n\t\t<input type=\"text\" formControlName=\"minDuration\">\n    {{minDuration.value}}\n    <div *ngIf=\"minDuration.invalid && (minDuration.dirty || minDuration.touched)\"\n         class=\"new-alert-danger\">\n      <div *ngIf=\"minDuration.errors.required\">\n        Name is required.\n      </div>\n      <div *ngIf=\"minDuration.errors.maxlength\">\n        Name not be at more than 4 characters long.\n      </div>\n      <div *ngIf=\"minDuration.errors.min\">\n        Should not be less than 1---.\n      </div>\n      <div *ngIf=\"minDuration.errors.forbiddenName\">\n        {{minDuration.errors.forbiddenName | json}}\n        Name cannot be Bob.\n      </div>\n    </div>\n\t</div>\n\tMax:\n\t<div class=\"form-group\">\n\t\t<input type=\"text\" formControlName=\"maxDuration\">\n    {{maxDuration.invalid}}\n\n    <div *ngIf=\"maxDuration.invalid && (maxDuration.dirty || maxDuration.touched)\"\n         class=\"new-alert-danger\">\n\n      <div *ngIf=\"maxDuration.errors.required\">\n        maxName is required.\n      </div>\n      <div *ngIf=\"maxDuration.errors.maxlength\">\n        maxName not be at more than 4 characters long.\n      </div>\n      <div *ngIf=\"maxDuration.errors.min\">\n        Should not be less than 1---.\n      </div>\n      <div *ngIf=\"maxDuration.errors.max\">\n        Should not be greater than 100---.\n      </div>\n      <div *ngIf=\"maxDuration.errors.forbiddenName\">\n        Name cannot be Bob.\n      </div>\n    </div>\n    <div *ngIf=\"policyTermForm.invalid && policyTermForm.dirty\">\n      <div *ngIf=\"policyTermForm.errors?.minMaxValidation\">\n        Min is greater than max.\n      </div>\n    </div>\n\t</div>\n\n  <button type=\"submit\" (click)=\"submit(policyTermForm.value)\" [disabled]=\"policyTermForm.invalid\">Add</button>\n</form>\n"
+module.exports = "<form [formGroup]=\"policyTermForm\" >\n  Term name:\n  <div class=\"form-group\">\n    <input type=\"text\" formControlName=\"termName\">\n    <div *ngIf=\"termName.invalid && termName.touched\">\n      <div *ngIf=\"termName.errors.required\">\n        Term Name is required.\n      </div>\n    </div>\n  </div>\n\tMin:\n\t<div class=\"form-group\">\n\t\t<input type=\"text\" formControlName=\"minDuration\">\n    {{minDuration.value}}\n    <div *ngIf=\"minDuration.invalid && (minDuration.dirty || minDuration.touched)\"\n         class=\"new-alert-danger\">\n      <div *ngIf=\"minDuration.errors.required\">\n        Name is required.\n      </div>\n      <div *ngIf=\"minDuration.errors.maxlength\">\n        Name not be at more than 4 characters long.\n      </div>\n      <div *ngIf=\"minDuration.errors.min\">\n        Should not be less than 1---.\n      </div>\n      <div *ngIf=\"minDuration.errors.forbiddenName\">\n        {{minDuration.errors.forbiddenName | json}}\n        Name cannot be Bob.\n      </div>\n    </div>\n\t</div>\n\tMax:\n\t<div class=\"form-group\">\n\t\t<input type=\"text\" formControlName=\"maxDuration\">\n    <div *ngIf=\"maxDuration.invalid && (maxDuration.dirty || maxDuration.touched)\"\n         class=\"new-alert-danger\">\n      <div *ngIf=\"maxDuration.errors.required\">\n        maxName is required.\n      </div>\n      <div *ngIf=\"maxDuration.errors.maxlength\">\n        maxName not be at more than 4 characters long.\n      </div>\n      <div *ngIf=\"maxDuration.errors.min\">\n        Should not be less than 1---.\n      </div>\n      <div *ngIf=\"maxDuration.errors.max\">\n        Should not be greater than 100---.\n      </div>\n      <div *ngIf=\"maxDuration.errors.forbiddenName\">\n        Name cannot be Bob.\n      </div>\n    </div>\n\t</div>\n  <div *ngIf=\"policyTermForm.invalid && policyTermForm.dirty\">\n    <div *ngIf=\"policyTermForm.errors?.minMaxValidation\">\n      Min is greater than max.\n    </div>\n  </div>\n\n  <button type=\"submit\" (click)=\"submit(policyTermForm.value)\" [disabled]=\"policyTermForm.invalid\">Add</button>\n</form>\n"
 
 /***/ }),
 
@@ -298,9 +305,9 @@ var CustomReactiveValidationComponent = /** @class */ (function () {
     };
     CustomReactiveValidationComponent.prototype.createForm = function () {
         this.policyTermForm = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            // termName: new FormControl('', [
-            //   Validators.required,
-            // ]),
+            termName: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [
+                _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+            ]),
             minDuration: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(4),
@@ -313,13 +320,18 @@ var CustomReactiveValidationComponent = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].min(1),
                 _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].max(100)
             ]),
-        });
+        }, Object(_shared_forbidden_name_directive__WEBPACK_IMPORTED_MODULE_2__["minMaxValidator"])());
     };
     CustomReactiveValidationComponent.prototype.submit = function (value) {
         console.log(value);
     };
-    Object.defineProperty(CustomReactiveValidationComponent.prototype, "name", {
-        get: function () { return this.policyTermForm.get('name'); },
+    Object.defineProperty(CustomReactiveValidationComponent.prototype, "termName", {
+        get: function () { return this.policyTermForm.get('termName'); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(CustomReactiveValidationComponent.prototype, "minDuration", {
+        get: function () { return this.policyTermForm.get('minDuration'); },
         enumerable: true,
         configurable: true
     });
@@ -531,7 +543,7 @@ var DirectivesComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\r\n.center{\r\n  margin-left:25%;\r\n}\r\n"
 
 /***/ }),
 
@@ -542,7 +554,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  form-builder works!\n</p>\n\n<!--<form [formGroup]=\"form\">-->\n  <!--<label for=\"name\">Name:</label>-->\n  <!--<input id=\"name\" type=\"text\" formControlName=\"name\">-->\n  <!--<br>-->\n  <!--<div [formGoup]=\"matchingEmail\">-->\n    <!--<label for=\"email\">Email:</label>-->\n    <!--<input id=\"email\" type=\"email\" formControlName=\"email\">-->\n    <!--<br>-->\n    <!--<label for=\"confirmEmail\">Confirm Email:</label>-->\n    <!--<input id=\"confirmEmail\" type=\"email\" formControlName=\"confirmEmail\">-->\n  <!--</div>-->\n  <!--<br>-->\n  <!--<div [formGroup]=\"matchingPassword\">-->\n    <!--<label for=\"password\">Password:</label>-->\n    <!--<input id=\"password\" type=\"password\" formControlName=\"password\">-->\n    <!--<br>-->\n    <!--<label for=\"confirmPassword\">Confirm Password:</label>-->\n    <!--<input id=\"confirmPassword\" type=\"password\" formControlName=\"confirmPassword\">-->\n  <!--</div>-->\n<!--</form>-->\n<!--<p>Valid?: {{form.valid}}</p>-->\n<!--<pre>{{form.value | json}}</pre>-->\n"
+module.exports = "<p>\n  form-builder works!\n</p>\n\n<div class=\"row\">\n<form [formGroup]=\"policyTermForm\" class=\"col-sm-6 center\">\n  Term name:\n  <div class=\"form-group\">\n    <input type=\"text\" class=\"form-control\" formControlName=\"termName\">\n    ---{{policyTermForm.controls.termName.errors}}-----\n\n    <div *ngIf=\"termName.invalid && termName.touched\">\n      <div *ngIf=\"termName.errors.required\">\n        Term Name is required.\n      </div>\n    </div>\n  </div>\n\n  <div class=\"row\">\n    <div class=\"col-sm-6\">\n      Min:\n      <div class=\"form-group\">\n        <input type=\"text\" class=\"form-control\" formControlName=\"minDuration\">\n        <div *ngIf=\"minDuration.invalid && (minDuration.dirty || minDuration.touched)\"\n             class=\"new-alert-danger\">\n          <div *ngIf=\"minDuration.errors.required\">\n            Name is required.\n          </div>\n          <div *ngIf=\"minDuration.errors.maxlength\">\n            maxName not be at more than 4 characters long.\n          </div>\n          <div *ngIf=\"minDuration.errors.min\">\n            Should not be less than 1---.\n          </div>\n          <div *ngIf=\"minDuration.errors.max\">\n            Should not be greater than 100---.\n          </div>\n          <div *ngIf=\"minDuration.errors.forbiddenName\">\n            Name cannot be Bob.\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-sm-6\">\n      Max:\n      <div class=\"form-group\">\n        <input type=\"text\" class=\"form-control\" formControlName=\"maxDuration\">\n        <div *ngIf=\"maxDuration.invalid && (maxDuration.dirty || maxDuration.touched)\"\n             class=\"new-alert-danger\">\n          <div *ngIf=\"maxDuration.errors.required\">\n            maxName is required.\n          </div>\n          <div *ngIf=\"maxDuration.errors.maxlength\">\n            maxName not be at more than 4 characters long.\n          </div>\n          <div *ngIf=\"maxDuration.errors.min\">\n            Should not be less than 1---.\n          </div>\n          <div *ngIf=\"maxDuration.errors.max\">\n            Should not be greater than 100---.\n          </div>\n          <div *ngIf=\"maxDuration.errors.forbiddenName\">\n            Name cannot be Bob.\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n  <div *ngIf=\"policyTermForm.invalid && policyTermForm.dirty\">\n    <div *ngIf=\"policyTermForm.errors?.minMaxValidation\">\n      Min is greater than max.\n    </div>\n  </div>\n  FormValue: {{policyTermForm.status | json}}\n  <button type=\"submit\" (click)=\"submit(policyTermForm.value)\" >Adds</button>\n  <!--[disabled]=\"policyTermForm.invalid\"-->\n</form>\n</div>\n"
 
 /***/ }),
 
@@ -557,23 +569,72 @@ module.exports = "<p>\n  form-builder works!\n</p>\n\n<!--<form [formGroup]=\"fo
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormBuilderComponent", function() { return FormBuilderComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _shared_forbidden_name_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/forbidden-name.directive */ "./src/app/shared/forbidden-name.directive.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
 
 // import { FormBuilder, Control, ControlGroup, Validators} from '@angular/forms'
 var FormBuilderComponent = /** @class */ (function () {
-    function FormBuilderComponent() {
+    function FormBuilderComponent(fb) {
+        this.fb = fb;
     }
+    FormBuilderComponent.prototype.ngOnInit = function () {
+        console.log(this.policyTermForm);
+        this.policyTermForm = this.fb.group({
+            termName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
+            minDuration: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(4),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].min(1),
+                ]
+            ],
+            maxDuration: ['', [
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required,
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].maxLength(4),
+                    _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].min(1),
+                ]
+            ]
+        }, Object(_shared_forbidden_name_directive__WEBPACK_IMPORTED_MODULE_2__["minMaxValidator"])());
+    };
+    FormBuilderComponent.prototype.ngOnChange = function () {
+        console.log('changed');
+    };
+    FormBuilderComponent.prototype.submit = function (value) {
+        console.log(value);
+        console.log(this.policyTermForm);
+    };
+    Object.defineProperty(FormBuilderComponent.prototype, "termName", {
+        get: function () { return this.policyTermForm.get('termName'); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormBuilderComponent.prototype, "minDuration", {
+        get: function () { return this.policyTermForm.get('minDuration'); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(FormBuilderComponent.prototype, "maxDuration", {
+        get: function () { return this.policyTermForm.get('maxDuration'); },
+        enumerable: true,
+        configurable: true
+    });
     FormBuilderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-form-builder',
             template: __webpack_require__(/*! ./form-builder.component.html */ "./src/app/form-builder/form-builder.component.html"),
             styles: [__webpack_require__(/*! ./form-builder.component.css */ "./src/app/form-builder/form-builder.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]])
     ], FormBuilderComponent);
     return FormBuilderComponent;
 }());
@@ -880,6 +941,84 @@ var HeroesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [_hero_service__WEBPACK_IMPORTED_MODULE_1__["HeroService"]])
     ], HeroesComponent);
     return HeroesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/image-upload/image-upload.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/image-upload/image-upload.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/image-upload/image-upload.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/image-upload/image-upload.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  image-upload works!\n</p>\n\n<input type=\"file\" (change)=\"onFileChanged($event)\">\n<button type=\"button\" class=\"btn btn-primary\" (click)=\"onUpload()\">Upload</button>\n"
+
+/***/ }),
+
+/***/ "./src/app/image-upload/image-upload.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/image-upload/image-upload.component.ts ***!
+  \********************************************************/
+/*! exports provided: ImageUploadComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageUploadComponent", function() { return ImageUploadComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ImageUploadComponent = /** @class */ (function () {
+    function ImageUploadComponent(httpCall) {
+        this.httpCall = httpCall;
+        this.selectedFile = null;
+    }
+    ImageUploadComponent.prototype.ngOnInit = function () {
+        this.selectedFile = null;
+        // this.httpCall = 'asdads';
+    };
+    ImageUploadComponent.prototype.onFileChanged = function (event) {
+        this.selectedFile = event.target.files[0];
+        console.log(event.target.files[0]);
+    };
+    ImageUploadComponent.prototype.onUpload = function () {
+        var fd = new FormData();
+        fd.append('image', this.selectedFile, this.selectedFile.name);
+        console.log(fd);
+    };
+    ImageUploadComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-image-upload',
+            template: __webpack_require__(/*! ./image-upload.component.html */ "./src/app/image-upload/image-upload.component.html"),
+            styles: [__webpack_require__(/*! ./image-upload.component.css */ "./src/app/image-upload/image-upload.component.css")]
+        }),
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+    ], ImageUploadComponent);
+    return ImageUploadComponent;
 }());
 
 
@@ -1335,6 +1474,7 @@ function forbiddenNameValidator(nameRe) {
 function minMaxValidator() {
     return function (control) {
         var minDuration = control.value.minDuration;
+        console.log(minDuration);
         var maxDuration = control.value.maxDuration;
         console.log(minDuration, maxDuration);
         if (parseInt(minDuration) > parseInt(maxDuration)) {

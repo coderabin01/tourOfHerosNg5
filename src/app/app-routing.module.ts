@@ -8,6 +8,7 @@ import { RegisterComponent} from './register/register.component';
 import { DirectivesComponent} from './directives/directives.component';
 import {CustomReactiveValidationComponent} from "./custom-reactive-validation/custom-reactive-validation.component";
 import {FormBuilderComponent} from "./form-builder/form-builder.component";
+import {ImageUploadComponent} from "./image-upload/image-upload.component"
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -18,8 +19,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'directive', component: DirectivesComponent},
   { path: 'custom-validation', component: CustomReactiveValidationComponent},
-  { path: 'form-builder', component: FormBuilderComponent}
-
+  { path: 'form-builder', component: FormBuilderComponent},
+  { path: 'image-upload', component: ImageUploadComponent}
 ]
 
 @NgModule({

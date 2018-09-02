@@ -16,6 +16,7 @@ export function forbiddenNameValidator(nameRe: RegExp): ValidatorFn {
 export function minMaxValidator(): ValidatorFn {
   return (control: AbstractControl): {[key:string]: any} => {
     const minDuration = control.value.minDuration;
+    console.log(minDuration);
     const maxDuration = control.value.maxDuration;
     console.log(minDuration , maxDuration);
     if (parseInt(minDuration) > parseInt(maxDuration)){
